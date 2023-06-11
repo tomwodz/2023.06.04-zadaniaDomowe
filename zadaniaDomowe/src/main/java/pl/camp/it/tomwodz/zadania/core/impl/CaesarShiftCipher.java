@@ -1,16 +1,19 @@
-package pl.camp.it.tomwodz.zadania.core;
+package pl.camp.it.tomwodz.zadania.core.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import pl.camp.it.tomwodz.zadania.core.ICaesarShiftCipher;
+import pl.camp.it.tomwodz.zadania.core.IDeciphering;
+import pl.camp.it.tomwodz.zadania.core.IEncryption;
 
 import java.util.Scanner;
 
 @Component
-public class CaesarShiftCipher {
+public class CaesarShiftCipher implements ICaesarShiftCipher {
 
     @Autowired
-    private Encryption encryption;
+    private IEncryption encryption;
     @Autowired
-    private Deciphering deciphering;
+    private IDeciphering deciphering;
     public void start() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Podaj wiadomość do zaszyfrowania: ");
