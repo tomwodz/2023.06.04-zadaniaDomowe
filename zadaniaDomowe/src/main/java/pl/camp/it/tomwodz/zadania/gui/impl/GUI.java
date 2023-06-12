@@ -9,6 +9,7 @@ public class GUI implements IGUI {
     public void menu(){
         System.out.println("1. Caesar Shift Cipher");
         System.out.println("2. Black Jack");
-        System.out.println("3. Exit");
+        System.out.println("3. Game of 2048");
+        System.out.println("4. Exit");
     }
 }

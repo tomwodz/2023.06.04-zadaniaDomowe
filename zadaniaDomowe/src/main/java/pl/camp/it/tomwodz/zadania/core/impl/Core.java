@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 import pl.camp.it.tomwodz.zadania.core.IBlackjack;
 import pl.camp.it.tomwodz.zadania.core.ICaesarShiftCipher;
 import pl.camp.it.tomwodz.zadania.core.ICore;
+import pl.camp.it.tomwodz.zadania.core.IGameOf2048;
 import pl.camp.it.tomwodz.zadania.gui.IGUI;
 
 import java.util.Scanner;
@@ -21,6 +22,9 @@ public class Core implements ICore {
     @Autowired
     IBlackjack blackjack;
 
+    @Autowired
+    IGameOf2048 gameOf2048;
+
     public void start() {
 
         Scanner scanner = new Scanner(System.in);
@@ -35,6 +39,9 @@ public class Core implements ICore {
                     blackjack.start();
                     break;
                 case "3":
+                   gameOf2048.start();
+                    break;
+                case "4":
                     run = false;
                     break;
                 default:

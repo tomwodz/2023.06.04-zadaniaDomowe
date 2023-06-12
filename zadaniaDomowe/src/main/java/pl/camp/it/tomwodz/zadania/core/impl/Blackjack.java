@@ -13,9 +13,6 @@ import java.util.Scanner;
 public class Blackjack implements IBlackjack {
 
     @Autowired
-    Cards cards;
-
-    @Autowired
     IBlackjackVer blackjackVer;
 
     public void start() {
